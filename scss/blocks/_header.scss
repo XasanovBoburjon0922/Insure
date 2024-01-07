@@ -1,11 +1,47 @@
-.site-header{
-
+.site-header {
+    padding: 21px 5px 19px 5px;
 }
-
-.header{
-    
+.header {
 }
-.title{
-    color: red;
-    font-size: 40px;
+.header__wrapper {
+    @include display()
+}
+.header__wrapper-nav {
+    @include display()
+}
+.header__wrapper-nav-list {
+    @include display($space:start);
+    margin-right: 33px;
+}
+.header__wrapper-nav-item:nth-child(2){
+    padding-right: 26px;
+    padding-left: 25px;
+}
+.header__wrapper-nav-link {
+    @include textStyle();
+    font-family: Karla;
+}
+.header__wrapper-nav-button {
+    height: 40px;
+    padding-top: 10px;
+    border: 1.5px solid #2C2830;
+}
+.header__wrapper-nav-button-link {
+    @include textStyle($color:#2C2830);
+    font-family: Karla;
+    padding: 20px 28.5px;
+}
+.hamburger-btn{
+    display: none;
+}
+@media (max-width:620px){
+    .header__wrapper-nav-list{
+        display: none;
+    }
+    .header__wrapper-nav-button{
+        display: none;
+    }
+    .hamburger-btn{
+        display: block;
+    }
 }

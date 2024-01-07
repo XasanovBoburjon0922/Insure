@@ -1,4 +1,111 @@
+.hero-section {
+    background: #2D2641;
+    height: 600px;
 
-
-.hero-section{}
-.hero{}
+}
+.hero {
+    @include display($items:start);
+    padding-top: 105px;
+}
+.hero__wrapper {
+    max-width: 531px;
+}
+.hero__wrapper-line {
+    display: inline-block;
+    width: 150px;
+    height: 1px;
+    background: #FFF;
+    margin-bottom: 63px;
+}
+.hero__wrapper-title {
+    @include textStyle($color:#fff, $fontSize:72px, $fontWeight:400, $lineHeight:64px, $spacing:-1px);
+    font-family: DM Serif Display;
+    margin-bottom: 16px;
+}
+.hero__wrapper-text {
+    @include textStyle($color:#fff, $fontSize:16px, $fontWeight:400, $lineHeight:26px);
+    letter-spacing: 0;
+    font-family: Karla;
+    margin-bottom: 24px;
+}
+.hero__wrapper-button {
+    max-width: 146px;
+    height: 40px;
+    border: 1.5px solid #FFF;
+    @include display($space:center);
+}
+.hero__wrapper-button-text {
+    @include textStyle($color:#fff, $fontSize:13px, $fontWeight:700, $lineHeight:normal, $spacing:1.5px);
+    font-family: Karla;
+    text-align: center;
+}
+@media (max-width:1040px){
+    .hero__wrapper-title {
+        @include textStyle($color:#fff, $fontSize:52px, $fontWeight:400, $lineHeight:52px, $spacing:-1px);
+        font-family: DM Serif Display;
+        margin-bottom: 16px;
+    }
+    .hero__wrapper-text {
+        @include textStyle($color:#fff, $fontSize:16px, $fontWeight:400, $lineHeight:26px);
+        letter-spacing: 0;
+        font-family: Karla;
+        margin-bottom: 24px;
+    }
+    .hero__wrapper-button-text {
+        @include textStyle($color:#fff, $fontSize:13px, $fontWeight:700, $lineHeight:normal, $spacing:1.5px);
+        font-family: Karla;
+        text-align: center;
+    }
+}
+@media (max-width:1021px){
+    .hero__wrapper-img{
+        max-width: 420px;
+        max-height: 100%;
+    }
+    .hero__wrapper-button{
+        margin-bottom: 93px;
+    }
+}
+@media (max-width:745px){
+    .hero__wrapper-img{
+        max-width: 340px;
+        max-height: 100%;
+    }
+    .hero__wrapper-button{
+        margin-bottom: 93px;
+    }
+}
+@media (max-width:665px){
+    .hero-section{
+        padding-bottom: 250px;
+    }
+    .hero{
+        @include display($item:center, $space:center);
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .hero__wrapper-img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .hero__wrapper-title {
+        @include textStyle($color:#fff, $fontSize:48px, $fontWeight:400, $lineHeight:48px, $spacing:-1px);
+        font-family: DM Serif Display;
+        margin-bottom: 16px;
+    }
+    .hero__wrapper-text {
+        @include textStyle($color:#fff, $fontSize:16px, $fontWeight:400, $lineHeight:26px);
+        letter-spacing: 0;
+        font-family: Karla;
+        margin-bottom: 32px;
+    }
+    .hero__wrapper-button{
+        margin-bottom: 93px;
+    }
+    .hero__wrapper-button-text {
+        @include textStyle($color:#fff, $fontSize:13px, $fontWeight:700, $lineHeight:normal, $spacing:1.5px);
+        font-family: Karla;
+        text-align: center;
+    }
+}
